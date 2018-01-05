@@ -12,4 +12,22 @@ const tiempo = hoy - birth;
 const tiempoSeg = tiempo / 1000;
 
 // diferencia entre fechas en minutos
-const tiempoMin = tiempo / 60;
+const tiempoMin = tiempoSeg / 60;
+
+// diferencia entre fechas en horas
+const tiempoHor = tiempoMin / 60;
+
+// que dia cumplo este año
+const proximoCumple = new Date(hoy.getFullYear(), birth.getMonth(), birth.getDate());
+
+const dias = [
+    'Domingo',
+    'Lunes',
+    'Martes',
+    'Miercoles',
+    'Jueves',
+    'Viernes',
+    'Sabado'
+];
+
+dias[proximoCumple.getDay()];
