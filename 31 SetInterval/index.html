@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>set interval</title>
+    </head>
+    <body>
+        <h1 id="timer">Han pasado 0 segundos</h1>
+
+        <script type="text/javascript">
+            // setInterval(que voy a hacer, cada cuanto tiempo debo hacerlo)
+            // setInterval(() => {
+            //     console.log('ha pasado 1 segundo')
+            // }, 1000);
+            const timer = document.getElementById('timer');
+            let counter = 0;
+            setInterval(() => {
+                counter++;
+                let template = (counter === 1) ? `Ha pasado ${counter} segundo` : `Han pasado ${counter} segundos`;
+                timer.textContent = template;
+            }, 1000);
+        </script>
+    </body>
+</html>
