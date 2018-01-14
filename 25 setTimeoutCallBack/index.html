@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 id="agenda">Estoy despertando</h1>
+        <script type="text/javascript">
+            const DESPERTAR = 5000;
+            const DUCHA = 3500;
+            const CAMBIAR = 1450;
+            const DESAYUNAR = 4000;
+            const PLATZI = 30000;
+
+            const $agenda = document.getElementById('agenda');
+
+            setTimeout(() => {
+                 $agenda.textContent = 'Ahora me estoy duchando...';
+
+                setTimeout(() => {
+                    $agenda.textContent = 'Ahora me estoy cambiando...';
+
+                    setTimeout(() => {
+                        $agenda.textContent = 'Ahora estoy desayunando...';
+
+                        setTimeout(() => {
+                            $agenda.textContent = 'Ahora estoy estudiando...';
+
+                            setTimeout(() => {
+                                $agenda.textContent = 'Ahora estoy meditando...';
+                            }, PLATZI);
+
+                        }, DESAYUNAR);
+
+                    }, CAMBIAR);
+
+                }, DUCHA);
+
+            }, DESPERTAR);
+        </script>
+    </body>
+</html>

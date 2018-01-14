@@ -9,6 +9,7 @@
     <body>
         <div>
             <h1></h1>
+            <button id="cancel-button">cancel</button>
         </div>
         <script type="text/javascript">
             // setTimeout(que vamos a hacer, en cuanto tiempo);
@@ -16,10 +17,18 @@
             //     console.log('han pasado 5 segundos')
             // }, 5000);
 
-            setTimeout(() => {
+            const $cancelButton = document.getElementById('cancel-button');
+
+            // $cancelButton.addEventListener('que evento', que hago)
+            $cancelButton.addEventListener('click', () => {
+                clearTimeout(timerOut)
+            });
+
+            const timerOut = setTimeout(() => {
                 alert('han pasado 5 segundos');
                 // document.write('han pasado 5 segundos');
             }, 5000);
+
         </script>
     </body>
 </html>
