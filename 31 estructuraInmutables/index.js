@@ -10,4 +10,14 @@ let tocayo = manuel;
 tocayo === manuel;
 tocayo.edad = 38;
 
-tocayo;
+// function birth (persona) {
+//     persona.edad++;
+// }
+
+// birth(manuel);
+
+birth function (persona) {
+    const clone = Object.assign({}, persona);
+    clone.edad++;
+    return clone;
+}
